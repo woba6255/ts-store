@@ -1,0 +1,19 @@
+{
+  "name": "ts-store",
+  "version": "1.2.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsc --watch",
+    "s": "node ./dist/index.js"
+  },
+  "dependencies": {
+    "node-json-db": "^1.1.0",
+    "fs-extra": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/node-json-db": "^0.9.3",
+    "@types/fs-extra": "^8.1.0",
+    "typescript": "^3.8.3"
+  }
+}

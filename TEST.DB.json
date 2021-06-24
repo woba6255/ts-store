@@ -1,0 +1,15 @@
+{
+    "appInfo": {
+        "name": "HW!",
+        "description": "Default hello world app.",
+        "version": "1.0.0"
+    },
+    "apps": {
+        "ap": {
+            "cssModify": false
+        }
+    },
+    "stat": {
+        "loadedTimes": 7
+    }
+}
