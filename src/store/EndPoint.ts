@@ -1,7 +1,7 @@
 import { IEndPoint, IStoreDBAdapter } from './store.types'
 import { Json, JsonArray } from './json.types'
 
-export type EndPointsTypes = string | number | boolean | Json | JsonArray
+export type EndPointsTypes = undefined | string | number | boolean | Json | JsonArray
 export type EndPointsTypesString = 'string' | 'number' | 'boolean' | 'Json' | 'JsonArray'
 
 export class EndPoint implements IEndPoint {
@@ -22,12 +22,16 @@ export class EndPoint implements IEndPoint {
     }
 
     public set(toSave: EndPointsTypes): void {
-        if (this.type) if (!this.checkType(toSave)) throw new Error(`[TYPE ERROR] PREDICTED: ${this.type}; TOOK: ${typeof toSave} (${toSave})`)
+        if (this.type) if (!this.checkType(toSave)) throw new Error(`PREDICTED: ${this.type}; TOOK: ${typeof toSave} (${toSave})`)
         this.adapter.set(this._map, toSave)
     }
 
     public nullify(): void {
         this.adapter.nullify(this._map)
+    }
+
+    public delete(): void {
+        return this.adapter.delete(this._map)
     }
 
     checkType(toCheckType: EndPointsTypes){

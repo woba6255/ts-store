@@ -6,20 +6,28 @@ import { EndPointsTypes } from './EndPoint'
 export class NodeJsonDBAdapter implements IStoreDBAdapter {
     private db: JsonDB
     constructor(
-        private readonly config: {}
+        private readonly fileName: string = "db.json"
     ) {
-        this.db = new JsonDB("TEST.DB", true, true, '/')
+        this.db = new JsonDB(fileName, true, true, '/')
     }
 
     public set(map: string, toSave: EndPointsTypes): void {
         this.db.push(map, toSave)
     }
     public get(map: string): EndPointsTypes {
-        return this.db.getData(map)
+        try {
+            return this.db.getData(map);
+        } catch (e: any) {
+            if (e?.id !== 5) console.error()
+        }
     }
 
     public nullify(map: string): void {
         this.db.push(map, null)
+    }
+
+    public delete(map: string): void {
+        this.db.delete(map)
     }
 
 }
