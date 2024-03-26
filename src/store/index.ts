@@ -1,4 +1,2 @@
-export * from './Store'
-
-export * from './store.types'
-export * from './json.types'
+export { TypedStoreAdapter } from "./TypedStoreAdapter.js";
+export { TypedStore } from "./TypedStore.js";
