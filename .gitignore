@@ -1,6 +1,5 @@
 *.db
 *.DB
-db.json
 
 # IDE Specific
 nbproject
@@ -16,11 +15,6 @@ composer.lock
 *.swo
 
 # Project Specific
-.build
-**/.build
-./dist
-**/dist
-**/release
 **/node_modules
 **/.node_modules
 *.log
