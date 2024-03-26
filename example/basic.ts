@@ -1,5 +1,4 @@
-import { TypedStore } from "../store/index.js";
-import { NodeJsonDBAdapter } from "../Adapters/NodeJsonDBAdapter.js";
+import { TypedStore, NodeJsonDBAdapter } from "../dist/index.js";
 
 type State = {
     test: {

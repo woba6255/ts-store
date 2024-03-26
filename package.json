@@ -6,8 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "build:watch": "tsc --watch",
-    "run": "node ./dist/example/basic.js"
+    "build:watch": "tsc --watch"
   },
   "dependencies": {
     "node-json-db": "2.3.0"
