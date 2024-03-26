@@ -14,7 +14,7 @@ type State = {
     }
 }
 
-const { store} = new TypedStore<State>(new NodeJsonDBAdapter());
+const { store } = new TypedStore<State>(new NodeJsonDBAdapter());
 
 await store.test.field.set('Hello, World!');
 const helloWorld = await store.test.field.get();
