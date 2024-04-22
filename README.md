@@ -10,14 +10,6 @@ type State = {
     test: {
         field: string
     },
-    another: {
-        object: {
-            alpha: number
-            bravo: string
-            charlie: boolean
-        },
-        someValue: string
-    }
 }
 
 const { store } = new TypedStore<State>(new NodeJsonDBAdapter());
