@@ -1,4 +1,4 @@
-# TS-Store - a simple and easy nodejs typed store
+# TS-Store - simple and easy nodejs typed store
 
 Provides a friendly interface for storing and typing small amounts of data in JSON format. 
 Default: works over of [node-json-db](https://github.com/Belphemur/node-json-db) library, saving data in json file. 
