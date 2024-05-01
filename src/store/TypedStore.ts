@@ -48,7 +48,7 @@ function getProxy(path: string[], store: TypedStore<Json>): Json {
             }
 
             if (lastPath === 'delete') {
-                console.log('get', pathToMethod)
+                return store.delete(pathToMethod)
             }
 
             throw new Error(`Unknown method ${lastPath}`)
